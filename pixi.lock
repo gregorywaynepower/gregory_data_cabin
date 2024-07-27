@@ -42,7 +42,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/bidict-0.23.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/bleach-6.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/brotli-python-1.1.0-py312h30efb56_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-hd590300_5.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-h4bc722e_7.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/c-ares-1.32.3-h4bc722e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ca-certificates-2024.7.4-hbcca054_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cached-property-1.5.2-hd8ed1ab_1.tar.bz2
@@ -90,7 +90,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/humanize-4.10.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/hyperframe-6.0.1-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/ibis-duckdb-8.0.0-hd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/ibis-framework-core-8.0.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/ibis-framework-core-8.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ibis-polars-8.0.0-hd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ibis-postgres-8.0.0-hd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-73.2-h59595ed_0.conda
@@ -189,8 +189,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h59595ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/nest-asyncio-1.6.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/numpy-2.0.1-py312h1103770_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4ab18f5_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.4-py312heda63a1_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4bc722e_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/orc-2.0.1-h17fec99_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/overrides-7.7.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/packaging-24.1-pyhd8ed1ab_0.conda
@@ -250,7 +250,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/soupsieve-2.5-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/sqlalchemy-2.0.31-py312h9a8786e_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/sqlalchemy-views-0.3.2-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/sqlglot-25.7.1-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/sqlglot-20.11.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/stack_data-0.6.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/terminado-0.18.1-pyh0d859eb_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tinycss2-1.3.0-pyhd8ed1ab_0.conda
@@ -987,19 +987,20 @@ packages:
 - kind: conda
   name: bzip2
   version: 1.0.8
-  build: hd590300_5
-  build_number: 5
+  build: h4bc722e_7
+  build_number: 7
   subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-hd590300_5.conda
-  sha256: 242c0c324507ee172c0e0dd2045814e746bb303d1eb78870d182ceb0abc726a8
-  md5: 69b8b6202a07720f448be700e300ccf4
+  url: https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-h4bc722e_7.conda
+  sha256: 5ced96500d945fb286c9c838e54fa759aa04a7129c59800f0846b4335cee770d
+  md5: 62ee74e96c5ebb0af99386de58cf9553
   depends:
+  - __glibc >=2.17,<3.0.a0
   - libgcc-ng >=12
   license: bzip2-1.0.6
   license_family: BSD
   purls: []
-  size: 254228
-  timestamp: 1699279927352
+  size: 252783
+  timestamp: 1720974456583
 - kind: conda
   name: c-ares
   version: 1.32.3
@@ -1853,37 +1854,38 @@ packages:
 - kind: conda
   name: ibis-framework-core
   version: 8.0.0
-  build: pyhd8ed1ab_0
+  build: pyhd8ed1ab_1
+  build_number: 1
   subdir: noarch
   noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/ibis-framework-core-8.0.0-pyhd8ed1ab_0.conda
-  sha256: 8e852f34fc95cd1926be761b282f9b2601ecee06ca3d30c45b273aeece262e71
-  md5: ae3e530ec72f4f053b82a1af5da4a39a
+  url: https://conda.anaconda.org/conda-forge/noarch/ibis-framework-core-8.0.0-pyhd8ed1ab_1.conda
+  sha256: fd2b5d427a1be516363a1120ffdffe85c0c869cb7c147e0a0803898d3d015f31
+  md5: a7b3fc66c6248d2e6617337d025a6877
   depends:
   - atpublic >=2.3
   - bidict >=0.22.1
   - filelock >=3.7.0,<4
-  - multipledispatch >=0.6
-  - numpy >=1.15
+  - multipledispatch >=0.6,<2
+  - numpy >=1.15,<2
   - pandas >=1.2.5
   - parsy >=2
   - pins >=0.8.2
   - pyarrow >=2
-  - pyarrow-hotfix
+  - pyarrow-hotfix >=0.4
   - python >=3.9
   - python-dateutil >=2.8.2
   - python-graphviz >=0.16
   - pytz >=2022.7
   - regex >=2021.7.6
   - rich >=12.4.4
-  - sqlglot >=18.7.0
+  - sqlglot >=18.7.0,<=20.11
   - toolz >=0.11
   license: Apache-2.0
   license_family: Apache
   purls:
   - pkg:pypi/ibis-framework?source=conda-forge-mapping
-  size: 989482
-  timestamp: 1707169068382
+  size: 992096
+  timestamp: 1707236175984
 - kind: conda
   name: ibis-polars
   version: 8.0.0
@@ -3896,14 +3898,13 @@ packages:
   timestamp: 1707957948029
 - kind: conda
   name: numpy
-  version: 2.0.1
-  build: py312h1103770_0
+  version: 1.26.4
+  build: py312heda63a1_0
   subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/numpy-2.0.1-py312h1103770_0.conda
-  sha256: 0746a37d09036b4164ac14dd1328dd4e449a038383aac1e25e2d5f3a691518da
-  md5: 9f444595d8d9682891f2f078fc19da43
+  url: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.4-py312heda63a1_0.conda
+  sha256: fe3459c75cf84dcef6ef14efcc4adb0ade66038ddd27cadb894f34f4797687d8
+  md5: d8285bea2a350f63fab23bf460221f3f
   depends:
-  - __glibc >=2.17,<3.0.a0
   - libblas >=3.9.0,<4.0a0
   - libcblas >=3.9.0,<4.0a0
   - libgcc-ng >=12
@@ -3914,20 +3915,22 @@ packages:
   constrains:
   - numpy-base <0a0
   license: BSD-3-Clause
+  license_family: BSD
   purls:
   - pkg:pypi/numpy?source=conda-forge-mapping
-  size: 8345605
-  timestamp: 1721966364929
+  size: 7484186
+  timestamp: 1707225809722
 - kind: conda
   name: openssl
   version: 3.3.1
-  build: h4ab18f5_1
-  build_number: 1
+  build: h4bc722e_2
+  build_number: 2
   subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4ab18f5_1.conda
-  sha256: ff3faf8d4c1c9aa4bd3263b596a68fcc6ac910297f354b2ce28718a3509db6d9
-  md5: b1e9d076f14e8d776213fd5047b4c3d9
+  url: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4bc722e_2.conda
+  sha256: b294b3cc706ad1048cdb514f0db3da9f37ae3fcc0c53a7104083dd0918adb200
+  md5: e1b454497f9f7c1147fdde4b53f1b512
   depends:
+  - __glibc >=2.17,<3.0.a0
   - ca-certificates
   - libgcc-ng >=12
   constrains:
@@ -3935,8 +3938,8 @@ packages:
   license: Apache-2.0
   license_family: Apache
   purls: []
-  size: 2896610
-  timestamp: 1719363957188
+  size: 2895213
+  timestamp: 1721194688955
 - kind: conda
   name: orc
   version: 2.0.1
@@ -5088,22 +5091,23 @@ packages:
   timestamp: 1679473171457
 - kind: conda
   name: sqlglot
-  version: 25.7.1
+  version: 20.11.0
   build: pyhd8ed1ab_0
   subdir: noarch
   noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/sqlglot-25.7.1-pyhd8ed1ab_0.conda
-  sha256: 2d3c804c7a77b1a43ac67403871570b1d28e9ab62bd362c8c2706a5be3edb32e
-  md5: 6636eaa707da0830508e61019e6bd6c7
+  url: https://conda.anaconda.org/conda-forge/noarch/sqlglot-20.11.0-pyhd8ed1ab_0.conda
+  sha256: 3b2412ae1aa56bdfb6d6439c3870b13bb21a272f9babcc3cce725724107c098d
+  md5: 1e784de34c2c9dda899ec170e7afc7be
   depends:
   - python >=3.7
   constrains:
-  - sqlglotrs 0.2.8.*
+  - sqlglotrs 0.1.0.*
   license: MIT
+  license_family: MIT
   purls:
   - pkg:pypi/sqlglot?source=conda-forge-mapping
-  size: 281050
-  timestamp: 1721966755685
+  size: 1840964
+  timestamp: 1707318538976
 - kind: conda
   name: stack_data
   version: 0.6.2
