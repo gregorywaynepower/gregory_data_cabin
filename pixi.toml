@@ -1,7 +1,7 @@
 [project]
 name = "data_cabin_quarto"
 version = "0.1.0"
-description = "Add a short description here"
+description = "Gregory Power's website"
 authors = ["Gregory Power <31050507+gregorywaynepower@users.noreply.github.com>"]
 channels = ["conda-forge"]
 platforms = ["linux-64"]
@@ -10,6 +10,12 @@ platforms = ["linux-64"]
 
 [dependencies]
 python = ">=3.12.4,<3.13"
+jupyterlab = ">=4.2.4,<5"
+polars = ">=1.2.1,<2"
+python-duckdb = ">=1.0.0,<2"
+ibis-duckdb = ">=8.0.0,<9"
+ibis-polars = ">=8.0.0,<9"
+ibis-postgres = ">=8.0.0,<9"
 
 [pypi-dependencies]
 quarto-cli = ">=1.5.54, <1.6"
