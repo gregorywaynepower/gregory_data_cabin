@@ -16,6 +16,9 @@ python-duckdb = ">=1.0.0,<2"
 ibis-duckdb = ">=8.0.0,<9"
 ibis-polars = ">=8.0.0,<9"
 ibis-postgres = ">=8.0.0,<9"
+ipykernel = ">=6.29.5,<7"
+r-irkernel = ">=1.3.2,<2"
+pixi-kernel = ">=0.4.0,<0.5"
 
 [pypi-dependencies]
 quarto-cli = ">=1.5.54, <1.6"
